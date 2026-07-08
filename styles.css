@@ -43,8 +43,8 @@ header{
 }
 
 .nav{
-  display:flex;
-  justify-content:space-between;
+  display:grid;
+  grid-template-columns: auto 1fr auto;
   align-items:center;
   padding:10px 0;
   gap:16px;
@@ -79,6 +79,7 @@ header{
   display:flex;
   gap:22px;
   align-items:center;
+  justify-content:center;
   flex-wrap:wrap;
 }
 
@@ -89,6 +90,16 @@ header{
 }
 
 .nav-links a:hover{ color:var(--yellow); }
+
+.nav-whatsapp{
+  white-space:nowrap;
+  padding:10px 20px;
+  font-size:.9rem;
+}
+
+@media (max-width:900px){
+  .nav-whatsapp{ align-self:flex-start; }
+}
 
 /* BOTONES */
 
@@ -471,8 +482,14 @@ footer{
   h1{ max-width:none; }
 
   .nav{
+    display:flex;
     flex-direction:column;
     align-items:flex-start;
+  }
+
+  .nav-whatsapp{
+    align-self:stretch;
+    text-align:center;
   }
 }
 
