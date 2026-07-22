@@ -8,6 +8,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css"/>
+  <!-- Principio del widget de globo de Calendly -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <!-- Final del widget de globo de Calendly -->
 
 </head>
 <body>
@@ -254,5 +257,21 @@
       });
     });
   </script>
+
+  <!-- Principio del widget de globo de Calendly -->
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  <script type="text/javascript">
+    window.addEventListener('load', function () {
+      // PON ESTO EN SU LUGAR:
+      Calendly.initBadgeWidget({
+      url: 'https://calendly.com/contacto-citastaller/15min',
+      text: '¿Prefieres hablar por llamada?',
+      color: '#ffd600',
+      textColor: '#1a1a1a',
+      branding: false // <-- Cambiado a false
+    });
+    });
+  </script>
+  <!-- Final del widget de globo de Calendly -->
 </body>
 </html>
